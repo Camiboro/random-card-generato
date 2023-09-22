@@ -1,29 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <title>Random Card Generator</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #228b22; /* Fondo verde */
+        margin: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+      .card {
+        width: 120px;
+        height: 180px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 8px;
+        padding: 10px 5px;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        font-size: 24px;
+        position: relative;
+      }
+
+      .spade,
+      .club {
+        color: black;
+      }
+
+      .heart,
+      .diamond {
+        color: red;
+      }
+
+      .card .top,
+      .card .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .card .center {
+        font-size: 32px;
+        flex-grow: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
-    </div>
+    <div class="card" id="cardContainer"></div>
+
+    <script src="app.js" defer></script>
   </body>
 </html>
